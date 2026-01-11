@@ -12,7 +12,7 @@ import { SignIn, SignOut } from "./auth-components"
 
 export default async function UserButton() {
   const session = await auth()
-  if (!session?.user) return <SignIn />
+  if (!session?.user) return <SignIn provider="Google" />
   return (
     <div className="flex items-center gap-2">
       <span className="hidden text-sm sm:inline-flex">
